@@ -76,10 +76,14 @@
       }
 
       img{
-        height: 359px;
+        height: 250px;
         width: auto;
       }
 
+      .card.horizontal{
+        height: 250px;
+        width: auto;
+      }
       .footer{
         margin-top: 50px;
       }
@@ -142,8 +146,8 @@
       <div class="row">
         <p style="text-align: center;">
           <label> <input v-on:click="showGeralBomOtimo" class="with-gap" name="avaliacao" type="radio" checked /> <span>Bom ou Ótimo</span></label>
-          <label> <input v-on:click="showGeralRegular" class="with-gap" name="avaliacao" type="radio" checked /> <span>Regular</span></label>
-          <label> <input v-on:click="showGeralRuimPessimo" class="with-gap" name="avaliacao" type="radio" checked /> <span>Ruim ou Péssimo</span></label>
+          <label> <input v-on:click="showGeralRegular" class="with-gap" name="avaliacao" type="radio" /> <span>Regular</span></label>
+          <label> <input v-on:click="showGeralRuimPessimo" class="with-gap" name="avaliacao" type="radio" /> <span>Ruim ou Péssimo</span></label>
         </p>
       </div>
       <canvas id="geral_canvas"></canvas>
