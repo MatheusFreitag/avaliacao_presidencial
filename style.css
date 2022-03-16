@@ -1,0 +1,91 @@
+body{
+  background: #fefefe;
+}
+
+h1.titulo{
+  color: #424242;
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+p.descricao{
+  text-align: center;
+  color: gray;
+  font-size: 1.1rem;
+}
+
+.card.horizontal{
+  height: auto;
+  width: auto;
+  flex-direction: column;
+}
+
+.card.horizontal .card-image{
+  max-width: 100%;
+}
+
+.card.horizontal .card-image img{
+    border-radius: 2px 0 0 2px;
+    width: 100%;
+    height: 100%;
+}
+
+h2.secao{
+  color: #424242;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2.nomePresidente{
+  font-size: 2rem;
+  color: #424242;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+}
+
+hr {
+  border-top: 1px solid rgba(a,a,a,,0.4);
+  width: 80%;
+  margin: 55px 10%;
+}
+
+.footer {
+  margin-top: 0px;
+}
+
+.footer p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+
+      canvas{
+        background: white;
+      }
+      .container{
+        padding: 40px 10px;
+        width: 90% !important;
+      }
+
+      [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
+        padding-left: 23px;
+      }
+
+      label{
+        background-color: #eee;
+        padding: 7px;
+        border-radius: 5px;
+        color: gray;
+      }
+      #geral_canvas{
+        min-height: 400px;
+      }
+      #otimo_bom_canvas, #regular_canvas, #ruim_pessimo_canvas{
+        width: 100% !important;
+        display: inline-block;
+      }

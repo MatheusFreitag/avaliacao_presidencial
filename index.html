@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avaliação Presidencial</title>
     <meta property="og:url" content="https://matheusfreitag.github.io/avaliacao_presidencial/" />
     <meta property="og:type" content="article" />
@@ -17,84 +18,7 @@
     <meta name="twitter:image:alt" content="Avaliação geral dos presidentes com o filtro de Bom ou Ótimo" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <style>
-
-      body{
-        background: #fefefe;
-      }
-
-      canvas{
-        background: white;
-      }
-      .container{
-        padding: 40px 10px;
-        width: 90% !important;
-      }
-
-      [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
-        padding-left: 23px;
-      }
-
-      label{
-        background-color: #eee;
-        padding: 7px;
-        border-radius: 5px;
-        color: gray;
-      }
-      #geral_canvas{
-        min-height: 400px;
-      }
-      #otimo_bom_canvas, #regular_canvas, #ruim_pessimo_canvas{
-        width: 100% !important;
-        display: inline-block;
-      }
-
-      h1.titulo{
-        color: #424242;
-        text-align: center;
-        font-size: 40px;
-      }
-
-      p.descricao{
-        text-align: center;
-        color: gray;
-      }
-
-      h2.secao{
-        color: #424242;
-        font-size: 25px;
-        text-align: center;
-      }
-
-      h2.nomePresidente{
-        font-size: 40px;
-        color: #424242;
-      }
-
-      h3{
-        font-size: 18px;
-        color: #424242;
-        text-align: center;
-      }
-
-      hr{
-        opacity: .1;
-        margin: 50px 0px;
-      }
-
-      img{
-        height: 250px;
-        width: auto;
-      }
-
-      .card.horizontal{
-        height: 250px;
-        width: auto;
-      }
-      .footer{
-        margin-top: 50px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
@@ -132,7 +56,7 @@
         </div>
       </div>
 
-      <h3>Como os brasileiros avaliaram o governo {{presidente}}:</h3>
+      <!-- <h3>Como os brasileiros avaliaram o governo {{presidente}}:</h3>
 
       <div class="row">
         <div class="col s4 m4">
@@ -144,7 +68,7 @@
         <div class="col s4 m4">
           <canvas id="ruim_pessimo_canvas"></canvas>
         </div>
-      </div>
+      </div> -->
 
       <hr>
 
@@ -166,9 +90,9 @@
 
       <hr>
       <div class="footer">
-        <p>Desenvolvido por <a target="_blank" href="https://matheusfreitag.github.io/">Matheus Freitag</a> utilizando <a target="_blank" href="https://www.chartjs.org/">Chart.js</a>, <a target="_blank" href="https://vuejs.org/">Vue.js</a> e <a target="_blank" href="https://materializecss.com/">Materialize</a>.</p>
-        <p>O tratamento dos dados e visualizações cruas podem ser conferidas <a target="_blank" href="https://github.com/MatheusFreitag/avaliacao_presidencial/blob/master/presidentes.ipynb">aqui</a>, onde foi utilizado <a target="_blank" href="https://pandas.pydata.org/">Pandas</a> e <a target="_blank" href="https://matplotlib.org/">Matplotlib</a>.</p>
-        <p>Fonte para o dataset <a target="_blank" href="https://github.com/gabrielzanlorenssi/presidential_approval">aqui</a>, onde esta análise foi feita de forma parecida em R.</p>
+        <p>Desenvolvido por <a target="_blank" href="https://matheusfreitag.github.io/">Matheus Freitag</a> utilizando <a target="_blank" href="https://www.chartjs.org/">Chart.js</a>, <a target="_blank" href="https://vuejs.org/">Vue.js</a> e <a target="_blank" href="https://materializecss.com/">Materialize</a>.
+        <br>O tratamento dos dados e visualizações cruas podem ser conferidas <a target="_blank" href="https://github.com/MatheusFreitag/avaliacao_presidencial/blob/master/presidentes.ipynb">aqui</a>, onde foi utilizado <a target="_blank" href="https://pandas.pydata.org/">Pandas</a> e <a target="_blank" href="https://matplotlib.org/">Matplotlib</a>.
+        <br>Fonte para o dataset <a target="_blank" href="https://github.com/gabrielzanlorenssi/presidential_approval">aqui</a>, onde esta análise foi feita de forma parecida em R.</p>
       </div>
 
 
@@ -706,13 +630,14 @@
         },
 
         showIndividual: function(presidente){
-          var ctx = document.getElementById('otimo_bom_canvas').getContext('2d');
+          /*var ctx = document.getElementById('otimo_bom_canvas').getContext('2d');
           var ctx2 = document.getElementById('regular_canvas').getContext('2d');
           var ctx3 = document.getElementById('ruim_pessimo_canvas').getContext('2d');
+          */;
 
           switch (presidente) {
             case 'SARNEY':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1 = new Chart(ctx, {
@@ -843,7 +768,7 @@
                     }],
                   },
                 },
-              });
+              });*/
 
               this.conteudoCard = `<h2 class="nomePresidente">José Sarney</h2>
               <p><b>Sobre:</b></p>
@@ -855,7 +780,7 @@
             break;
 
             case 'COLLOR':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1 = new Chart(ctx, {
@@ -986,7 +911,7 @@
                     }],
                   },
                 },
-              });
+              });*/
               this.conteudoCard = `<h2 class="nomePresidente">Fernando Collor</h2>
               <p><b>Sobre:</b></p>
               <p><i>Fernando Affonso Collor de Mellomais</i>, conhecido como Fernando Collor, é um político brasileiro e foi o 32º Presidente do Brasil.</p>
@@ -997,7 +922,7 @@
             break;
 
             case 'ITAMAR':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1 = new Chart(ctx, {
@@ -1128,7 +1053,7 @@
                     }],
                   },
                 },
-              });
+              });*/
 
               this.conteudoCard = `<h2 class="nomePresidente">Itamar Franco</h2>
               <p><b>Sobre:</b></p>
@@ -1140,7 +1065,7 @@
             break;
 
             case 'FHC':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c2.destroy();
               c1 = new Chart(ctx, {
@@ -1271,7 +1196,7 @@
                     }],
                   },
                 },
-              });
+              });*/
 
               this.conteudoCard = `<h2 class="nomePresidente">Fernando Henrique Cardoso</h2>
               <p><b>Sobre:</b></p>
@@ -1283,7 +1208,7 @@
             break;
 
             case 'LULA':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1 = new Chart(ctx, {
@@ -1414,8 +1339,7 @@
                     }],
                   },
                 },
-              });
-
+              });*/
               this.conteudoCard = `<h2 class="nomePresidente">Luiz Inácio Lula da Silva</h2>
               <p><b>Sobre:</b></p>
               <p><i>Luiz Inácio Lula da Silva</i>, nascido Luiz Inácio da Silva e mais conhecido como Lula, é um político, ex-sindicalista e ex-metalúrgico brasileiro, sendo o 35.º presidente do Brasil.</p>
@@ -1426,7 +1350,7 @@
             break;
 
             case 'DILMA':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1= new Chart(ctx, {
@@ -1558,7 +1482,7 @@
                     }],
                   },
                 },
-              });
+              });*/
 
               this.conteudoCard = `<h2 class="nomePresidente">Dilma Rousseff</h2>
               <p><b>Sobre:</b></p>
@@ -1570,7 +1494,7 @@
             break;
 
             case 'TEMER':
-              if(c1) c1.destroy();
+              /*if(c1) c1.destroy();
               if(c2) c2.destroy();
               if(c3) c3.destroy();
               c1= new Chart(ctx, {
@@ -1702,7 +1626,7 @@
                     }],
                   },
                 },
-              });
+              });*/
               this.conteudoCard = `<h2 class="nomePresidente">Michel Temer</h2>
               <p><b>Sobre:</b></p>
               <p><i>Michel Miguel Elias Temer Lulia</i> é um político, advogado e escritor brasileiro, atual presidente da República Federativa do Brasil</p>
